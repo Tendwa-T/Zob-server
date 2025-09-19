@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/zobV1?createDatabaseIfNotExist=true
+    username: ${DB_USER}
+    password: ${DB_PASS}
+  jpa:
+    show-sql: true
