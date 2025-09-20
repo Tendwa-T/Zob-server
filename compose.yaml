@@ -1,0 +1,8 @@
+services:
+  rabbitmq:
+    image: 'rabbitmq:latest'
+    environment:
+      - 'RABBITMQ_DEFAULT_PASS=password'
+      - 'RABBITMQ_DEFAULT_USER=tendwa'
+    ports:
+      - '5672'
