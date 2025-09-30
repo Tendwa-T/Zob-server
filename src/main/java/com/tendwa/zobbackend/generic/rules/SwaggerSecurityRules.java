@@ -1,6 +1,6 @@
 package com.tendwa.zobbackend.generic.rules;
 
-import com.tendwa.zobbackend.generic.config.SecurityRules;
+import com.tendwa.zobbackend.generic.config.security.SecurityRules;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer;
 import org.springframework.stereotype.Component;

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 @AllArgsConstructor
-public class IncidentProducer {
+public class ServiceRegistrarProducer {
     private final RabbitTemplate rabbitTemplate;
 
     public void sendIncidentMessage(DiscoverServiceReq serviceDataJson){

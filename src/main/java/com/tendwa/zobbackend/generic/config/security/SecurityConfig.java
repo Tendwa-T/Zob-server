@@ -1,4 +1,4 @@
-package com.tendwa.zobbackend.generic.config;
+package com.tendwa.zobbackend.generic.config.security;
 
 
 import lombok.AllArgsConstructor;

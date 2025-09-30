@@ -2,27 +2,31 @@ package com.tendwa.zobbackend.discovery.entities;
 
 import com.tendwa.zobbackend.generic.enums.AppServiceStatus;
 import com.tendwa.zobbackend.generic.enums.EndpointType;
+import com.tendwa.zobbackend.generic.enums.HttpMethods;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+import org.springframework.http.HttpStatus;
 
 import java.util.UUID;
 
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "endpoints", schema = "zobV1")
 public class Endpoint {
     @Id
-    @Size(max = 16)
-    @ColumnDefault("(uuid_to_bin(uuid()))")
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "endpoint_id", nullable = false, length = 16)
+    @Column(name = "endpoint_id")
     private UUID endpointId;
 
     @NotNull
@@ -37,9 +41,9 @@ public class Endpoint {
     private String path;
 
     @NotNull
-    @Lob
     @Column(name = "method", nullable = false)
-    private String method;
+    @Enumerated(EnumType.STRING)
+    private HttpMethods method;
 
     @NotNull
     @ColumnDefault("'NORMAL'")

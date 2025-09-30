@@ -1,6 +1,9 @@
 package com.tendwa.zobbackend.discovery.services;
 
 import com.tendwa.zobbackend.discovery.dtos.requests.DiscoverServiceReq;
+import com.tendwa.zobbackend.discovery.dtos.requests.EndpointStatusReq;
+import com.tendwa.zobbackend.discovery.dtos.requests.EndpointsReq;
+import com.tendwa.zobbackend.discovery.dtos.requests.ServiceStatusReq;
 import com.tendwa.zobbackend.discovery.entities.AppService;
 
 import java.util.List;
@@ -13,13 +16,13 @@ public interface DiscoveryService {
     void discoverServices();
 
     //* Add new Endpoint to existing Service *params
-    void addEndpoint();
+    void addEndpoint(EndpointsReq req);
 
     //* Update Service Status *params
-    void updateServiceStatus();
+    void updateServiceStatus(ServiceStatusReq req);
 
     //* Update Endpoint Status *params
-    void updateEndpointStatus();
+    void updateEndpointStatus(EndpointStatusReq req);
 
     //* Get All registered Services
     List<AppService> getAllServices();

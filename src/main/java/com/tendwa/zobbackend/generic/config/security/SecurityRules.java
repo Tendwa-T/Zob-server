@@ -1,4 +1,4 @@
-package com.tendwa.zobbackend.generic.config;
+package com.tendwa.zobbackend.generic.config.security;
 
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer;

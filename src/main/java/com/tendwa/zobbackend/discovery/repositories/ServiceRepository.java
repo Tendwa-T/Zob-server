@@ -7,5 +7,5 @@ import java.util.Optional;
 import java.util.UUID;
 
 public interface ServiceRepository extends JpaRepository<AppService, UUID> {
-    Optional<AppService> findAllByNameAndBaseUrl(String name, String baseUrl);
+    AppService findAllByNameAndBaseUrl(String name, String baseUrl);
 }

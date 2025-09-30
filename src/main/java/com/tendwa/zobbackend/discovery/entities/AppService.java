@@ -19,10 +19,8 @@ import java.util.UUID;
 @Table(name = "services", schema = "zobV1")
 public class AppService {
     @Id
-    @Size(max = 16)
-    @ColumnDefault("(uuid_to_bin(uuid()))")
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "service_id", nullable = false, length = 16)
+    @Column(name = "service_id")
     private UUID serviceId;
 
     @Size(max = 255)
