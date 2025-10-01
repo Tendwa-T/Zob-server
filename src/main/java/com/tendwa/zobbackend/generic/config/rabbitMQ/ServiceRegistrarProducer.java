@@ -1,6 +1,6 @@
 package com.tendwa.zobbackend.generic.config.rabbitMQ;
 
-import com.tendwa.zobbackend.discovery.dtos.requests.DiscoverServiceReq;
+import com.tendwa.zobbackend.Regina.dtos.requests.DiscoverServiceReq;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

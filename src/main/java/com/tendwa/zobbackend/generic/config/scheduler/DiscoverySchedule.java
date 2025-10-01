@@ -1,7 +1,7 @@
 package com.tendwa.zobbackend.generic.config.scheduler;
 
 
-import com.tendwa.zobbackend.discovery.services.DiscoveryService;
+import com.tendwa.zobbackend.Regina.services.DiscoveryService;
 import lombok.AllArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
